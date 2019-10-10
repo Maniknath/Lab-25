@@ -1,0 +1,52 @@
+﻿<style>
+    form label {
+        display: inline-block;
+        width: 150px;
+        font-weight: bold;
+    }
+</style>
+
+<h2>Please Fill The Form To Register</h2>
+<br />
+
+<form method="post" action="Result">
+    <label for="FirstName">First Name: </label> <input type="text" name="FirstName" required /> <p></p>
+    <label for="LastName">Last Name: </label> <input type="text" name="LastName" required /> <p></p>
+    <label for="PhoneNumber">Phone Number: </label> <input type="text" name="PhoneNumber" required /> <p></p>
+    <label for="UserName">User Name: </label> <input type="text" name="UserName" required /> <p></p>
+    <label for="Email">Email: </label> <input type="email" name="Email" required /> <p></p>
+    <label for="Password">Password: </label> <input type="password" name="Password" required /> <p></p>
+    <p></p>
+
+    Select your favorite coffee: <br />
+    <select name="cofee">
+        <option value="royal">Royal</option>
+        <option value="bengol">Bengol</option>
+        <option value="espresso">Espresso</option>
+        <option value="americano">Americano</option>
+        <option value="mocha">Mocha</option>
+        <option value="arabian">Arabian</option>
+    </select>
+    <p></p>
+
+    Would you like to receive coupons by: <br />
+    <input type="radio" name="Coupons" /> Email
+    <input type="radio" name="Coupons" /> Text
+    <input type="radio" name="Coupons" /> Both
+    <input type="radio" name="Coupons" /> None
+    <p></p>
+
+    Royal Bengol Coffee Shop Membership: <br />
+    <input type="checkbox" name="RoyalDimond" /> Royal Dimond
+    <br />
+    <input type="checkbox" name="RoyalGold" /> Royal Gold
+    <br />
+    <input type="checkbox" name="RoyalSilver" /> Royal Silver
+    <br />
+    <input type="checkbox" name="LifeTime" /> Life Time
+    <p></p>
+
+    <input type="submit" />
+
+
+</form>
