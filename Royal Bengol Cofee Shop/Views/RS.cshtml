@@ -1,23 +1,22 @@
 ﻿@model Royal_Bengol_Cofee_Shop.Models.UserItem
 
 @{
-    ViewData["Title"] = "RegisterItem";
+    ViewData["Title"] = "RS";
 }
 
-<h2>Register Item</h2>
+<h2>RS</h2>
 
 <h4>UserItem</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="ItemResultView">
+        <form asp-action="RS">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            
             <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
                 <input asp-for="Price" class="form-control" />
@@ -44,6 +43,3 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

@@ -4,7 +4,7 @@ namespace Royal_Bengol_Cofee_Shop.Models
 {
     public class UserItem
     {
-        [Required]
+        [Required(ErrorMessage = "Please type the name")]
         [DataType(DataType.Text)]
         [StringLength(20, ErrorMessage = "Do not enter more than 20 characters")]
         public string Name { get; set; }

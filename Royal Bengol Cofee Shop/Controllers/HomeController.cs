@@ -35,6 +35,7 @@ namespace Royal_Bengol_Cofee_Shop.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
         public IActionResult Registration()
         {
             return View();
@@ -42,31 +43,40 @@ namespace Royal_Bengol_Cofee_Shop.Controllers
         public IActionResult Result(User user)
         {
             ViewBag.Name = user.FirstName;
+            ViewBag.FirstName = user.FirstName;
             return View();
         }
+
 
         public IActionResult RegisterItem()
         {
             return View();
         }
-
-       
+        public IActionResult ItemResultView()
+        {
+            return View();
+        }
         [HttpPost]
-            public IActionResult RegisterItem(UserItem userItem)
+        public IActionResult ItemResultView(UserItem userItem)
         {
             if (ModelState.IsValid)
             {
-            ViewBag.Name = userItem.Name;
-            ViewBag.Price = userItem.Price;
-            ViewBag.Description = userItem.Description;
-            ViewBag.Quantity = userItem.Quantity;
-            return View();
+
+                //ViewBag.Name = userItem.Name;
+                //ViewBag.Price = userItem.Price;
+                //ViewBag.Description = userItem.Description;
+                //ViewBag.Quantity = userItem.Quantity;
+                return View(userItem);
 
             }
             else
             {
                 return View(userItem);
+
             }
+
+
+
         }
     }
 }

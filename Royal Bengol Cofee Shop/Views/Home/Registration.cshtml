@@ -1,6 +1,9 @@
-﻿<style>
+﻿@model Royal_Bengol_Cofee_Shop.Models.User
+
+<style>
     form label {
-        display: inline-block;
+        background-color: aqua;
+        display: inline-flex;
         width: 150px;
         font-weight: bold;
     }
@@ -46,7 +49,12 @@
     <input type="checkbox" name="LifeTime" /> Life Time
     <p></p>
 
+    Do you agree to our terms and condition? <br />
+    <input type="checkbox" name="IamAgree" required /> I am agree
+    <p></p>
+
     <input type="submit" />
 
 
 </form>
+
